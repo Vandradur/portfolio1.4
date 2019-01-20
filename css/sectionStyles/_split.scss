@@ -1,0 +1,171 @@
+.split {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop640 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .screen {
+        position: relative;
+        flex-grow: 1;
+        transition: 1s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        .card {
+            max-width: 200px;
+            text-align: center;
+            transition: 0.05s;
+
+            .imgBx {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin: 0 auto;
+
+                @include desktop640 {
+                    width: 120px;
+                    height: 120px;
+                }
+
+                @include desktop1024 {
+                    width: 170px;
+                    height: 170px;
+                }
+
+
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            h2 {
+                text-transform: uppercase;
+                font-weight: 300;
+                font-size: .9em;
+                line-height: 19px;
+                margin-top: 3px;
+                font-family: $marcellus;
+                color: color(primary-lite-1);
+
+                @include desktop640 {
+                    font-size: 1.1em;
+                    margin-top: 6px;
+                }
+
+                @include desktop768 {
+                    font-size: 1.2em;
+                    margin-top: 8px;
+                }
+
+                @include desktop1024 {
+                    font-size: 1.3em;
+                }
+            }
+
+            .imgBox_text {
+                text-decoration: none;
+                color: color(secondary);
+                font-family: $encode-sans;
+                font-size: .7em;
+
+                @include desktop640 {
+                    font-size: .8em;
+                }
+
+                @include desktop768 {
+                    font-size: .9em;
+                }
+
+                @include desktop1024 {
+                    font-size: 1em;
+                    margin-top: 15px;
+                }
+            }
+
+            .two {
+                color: color(white);
+            }
+
+            .imgBox_text:hover~.contentWrapper,
+            .contentWrapper:hover {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .contentWrapper {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: color(white);
+                padding: 30px 40px;
+                visibility: hidden;
+                transition: 0.5s;
+                opacity: 0;
+
+                a {
+                    text-decoration: none;
+                }
+
+                h3 {
+                    font-family: $abril;
+                    color: color(secondary-dark);
+                    font-size: 1.2em;
+                    padding: 0;
+                    margin: 0;
+
+
+                    @include desktop640 {
+                        font-size: 2em;
+                    }
+                }
+
+                p {
+                    font-family: $barlow;
+                    color: color(secondary-dark);
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    font-size: .6em;
+
+                    @include desktop640 {
+                        font-size: .7em;
+                        margin-top: 5px;
+
+                    }
+
+                    @include desktop1024 {
+                        font-size: 1em;
+                        margin-top: 5px;
+
+                    }
+                }
+
+                .btn {
+                    @include buttonStyle-2;
+                }
+            }
+        }
+    }
+}
+
+.screen:nth-child(1) {
+    background-color: color(white);
+}
+
+.screen:nth-child(2) {
+    background-color: color(secondary-dark);
+}
+
+.screen:hover {
+    flex-grow: 4;
+}

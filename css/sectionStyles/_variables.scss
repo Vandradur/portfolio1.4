@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Barlow:500|Cinzel|Encode+Sans+Condensed:300,400,700|Francois+One|Marcellus+SC|Quattrocento|Sarala:700");
+
+$fa-font-path: "../webfonts";
+
+
+$encode-sans: "Encode Sans Condensed";
+$abril: "Abril Fatface";
+$francois: "Francois One";
+$cinzel: "Cinzel";
+$barlow: "Barlow";
+$quattrocento: "Quattrocento";
+$sarala: "Sarala";
+$marcellus: "Marcellus SC";
+
+$desktop600: 600px;
+$desktop800: 800px;
+$desktop: 840px;
+
+$padding-01: 15px;
+$padding-02: 30px;
+$section-heading: 24px;
+
+
+$colors: (white: #fff,
+green: rgba(71, 231, 143, 0.945),
+primary-transparent: #dfcddfbb,
+primary-lite-4: lighten(#c8a2c8, 27%),
+primary-lite-3: lighten(#c8a2c8, 26%),
+primary-lite-2: lighten(#c8a2c8, 25%),
+primary-lite-1: lighten(#c8a2c8, 5%),
+primary: #c8a2c8,
+primary-dark: darken(#c8a2c8, 40%),
+primary-dark-1: darken(#c8a2c8, 60%),
+primary-dark-2: darken(#c8a2c8, 80%),
+secondary-lite: lighten(#414a4c, 5%),
+secondary: #0e1111,
+secondary-dark: darken(#0e1111, 40%));
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}

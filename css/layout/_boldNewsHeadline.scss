@@ -1,0 +1,218 @@
+.boldNewsHeadline_header {
+  background: #fff;
+  padding: 1em;
+  margin: 0;
+
+  @include desktop640 {
+  }
+
+  @include desktop768 {
+  }
+
+  @include desktop1024 {
+  }
+
+  h1 {
+    font-family: $francois;
+    text-transform: uppercase;
+    color: color(secondary-dark);
+    font-size: 2.5em;
+    line-height: 0.9;
+    margin: 0;
+
+    @include desktop640 {
+      font-size: 4em;
+    }
+
+    @include desktop768 {
+      font-size: 6em;
+    }
+
+    @include desktop1024 {
+      font-size: 8em;
+    }
+  }
+
+  h3 {
+    font-family: $francois;
+    text-transform: capitalize;
+    color: color(secondary-dark);
+    font-size: 1.3em;
+    line-height: 0.9;
+    margin-top: 0.2em;
+    margin-bottom: 0.1em;
+
+    @include desktop640 {
+      font-size: 2.1em;
+    }
+
+    @include desktop768 {
+      font-size: 2.5em;
+    }
+
+    @include desktop1024 {
+      font-size: 4em;
+    }
+  }
+}
+
+#boldNewsHeadline_wrapper {
+  width: 100%;
+  height: 100%;
+
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @include desktop640 {
+    flex-direction: row;
+  }
+
+  .newsCards {
+    background-color: color(white);
+    border: 1px solid rgba(208, 206, 206, 0.419);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.02);
+    min-width: 100%;
+    padding: 10px;
+    margin: 5px auto;
+    display: flex;
+    flex: 1 auto;
+    flex-direction: column;
+
+    @include desktop640 {
+      width: 50%;
+      min-width: 0;
+    }
+
+    @include desktop768 {
+      width: 37%;
+    }
+
+    @include desktop1024 {
+      width: 33.33333%;
+      min-width: 0;
+    }
+
+    .newsCards_title {
+      font-size: 70%;
+      font-weight: 200;
+      font-family: $francois;
+      text-transform: uppercase;
+      color: color(secondary-lite);
+    }
+
+    .newsCards_info {
+      display: flex;
+    }
+
+    .newsCards_description,
+    .newsCards_sender {
+      flex: 1;
+      font-family: $francois;
+      font-size: 80%;
+      text-transform: capitalize;
+      color: color(secondary-dark);
+
+      @include desktop768 {
+        font-size: 100%;
+      }
+    }
+
+    .newsCards_sender {
+      text-align: right;
+    }
+
+    .fa {
+      font-size: 90%;
+      color: color(secondary-dark);
+
+      @include desktop768 {
+        font-size: 100%;
+      }
+    }
+
+    .newsCards_bottom {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      /* a flex: 1 also works here, but is buggy on IE11 */
+      p {
+        color: color(secondary-dark);
+        text-decoration: none;
+        font-family: $encode-sans;
+        font-size: 70%;
+      }
+    }
+
+    img {
+      margin: 20px 0;
+      align-self: center;
+      width: 100%;
+      height: auto;
+    }
+
+    .newsCards_button {
+      @include buttonStyle-2;
+    }
+  }
+}
+
+.main-content {
+  margin-top: -3px;
+
+  padding: 1em;
+  flex: 70%;
+  column-gap: 2em;
+  column-count: 1;
+  column-rule: 1px solid color(secondary-dark);
+
+  @include desktop640 {
+    column-count: 2;
+  }
+
+  @include desktop768 {
+    column-count: 2;
+  }
+
+  @include desktop1024 {
+    column-count: 3;
+  }
+
+  .mainContent_text {
+    color: color(secondary-dark);
+    text-decoration: none;
+    font-family: $encode-sans;
+    display: block;
+    font-size: 0.65em;
+    letter-spacing: 0.1em;
+
+    @include desktop640 {
+      font-size: 0.7em;
+    }
+
+    @include desktop768 {
+      font-size: 0.8em;
+    }
+
+    @include desktop1024 {
+      font-size: 0.9em;
+      letter-spacing: -0.02em;
+    }
+  }
+}
+
+.mainNewsFooter {
+  background: #eee;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+
+  p {
+    color: color(secondary-dark);
+    text-decoration: none;
+    font-family: $encode-sans;
+    font-size: 0.5em;
+  }
+}

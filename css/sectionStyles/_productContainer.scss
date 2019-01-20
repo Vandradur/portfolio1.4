@@ -1,0 +1,81 @@
+.banner {
+    .banner-text {
+        h1 {
+            font-family: $encode-sans;
+            font-size: 1.6em;
+
+            @include desktop640 {
+                font-size: 1.9em;
+            }
+
+            @include desktop768 {
+                font-size: 2em;
+            }
+
+            @include desktop1024 {
+                font-size: 2.3em;
+            }
+
+
+        }
+
+        h3 {
+
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-family: $encode-sans;
+            font-size: .6em;
+
+            @include desktop640 {
+                font-size: .8em;
+            }
+
+            @include desktop768 {
+                font-size: 1em;
+            }
+
+            @include desktop1024 {
+                font-size: 1.3em;
+            }
+        }
+
+        h6 {
+            font-family: $encode-sans;
+            font-size: .6em;
+
+            @include desktop640 {
+                font-size: .8em;
+            }
+
+            @include desktop768 {
+                font-size: 1em;
+            }
+
+            @include desktop1024 {
+                font-size: 1.3em;
+            }
+        }
+
+
+    }
+}
+
+
+
+.banner h1,
+.banner h3,
+.banner h6 {
+    margin: 0;
+    text-shadow: 2px 2px 6px #000;
+    text-align: center;
+}
+
+.banner {
+    color: color(white);
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/banner-flowers.jpg') top left/cover no-repeat;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

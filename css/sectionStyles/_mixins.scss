@@ -1,0 +1,134 @@
+@mixin desktop640 {
+  @media (min-width: #{$desktop600}) {
+    @content;
+  }
+}
+
+@mixin desktop768 {
+  @media (min-width: #{$desktop800}) {
+    @content;
+  }
+}
+
+@mixin desktop1024 {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+$small-breakpoint: 640px;
+$medium-breakpoint: 768px;
+$large-breakpoint: 1024px;
+$xlarge-breakpoint: 1600px;
+
+@mixin buttonStyle-1 {
+  background: color(primary-dark-2);
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+
+  &:hover {
+    background: color(primary-dark);
+    transition: all 0.3s ease;
+  }
+
+  &:active {
+    background: color(primary-dark-1);
+  }
+}
+
+@mixin buttonStyle-2 {
+  background: color(primary-dark-1);
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  font-family: $barlow;
+  text-decoration: none;
+  letter-spacing: 0.7px;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin: 4px 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
+  outline: none;
+  display: block;
+
+  @include desktop640() {
+    display: inline;
+
+  }
+
+  &:hover {
+    background: color(primary-dark);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    background: color(primary-dark-1);
+  }
+}
+
+@mixin fullImageViews {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  .description {
+    position: absolute;
+    top: 0;
+    background: color(primary-transparent);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  h4 {
+    position: relative;
+    text-transform: uppercase;
+    line-height: 0.8;
+    text-shadow: 0 2px 4px rgb(253, 253, 253);
+    letter-spacing: -1px;
+    font-family: $encode-sans;
+    font-size: 4.3em;
+    transform: skewY(-4deg);
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    font-family: $barlow;
+    margin-top: 27px;
+  }
+
+  @include desktop {
+    .description {
+      width: 100%;
+      height: 50%;
+      padding: 24px 20px;
+
+      h4 {
+        font-size: 2em;
+        letter-spacing: -0.7px;
+        margin: 0;
+        padding: 0;
+      }
+
+      p {
+        font-size: 0.8em;
+        margin-top: 23px;
+      }
+    }
+  }
+}

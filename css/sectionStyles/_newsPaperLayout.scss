@@ -1,0 +1,186 @@
+#newsPaperLayout {
+    background: #fff;
+}
+
+.header {
+    background: #fff;
+    padding: 1em;
+    margin: 0;
+
+    @include desktop640 {}
+
+    @include desktop768 {}
+
+    @include desktop1024 {}
+
+    h1 {
+
+        font-family: $francois;
+        text-transform: uppercase;
+        color: color(secondary-dark);
+        font-size: 2.5em;
+        line-height: .9;
+        margin: 0;
+
+        @include desktop640 {
+            font-size: 4em;
+
+        }
+
+        @include desktop768 {
+            font-size: 6em;
+
+        }
+
+        @include desktop1024 {
+            font-size: 8em;
+
+        }
+    }
+
+    h3 {
+        font-family: $francois;
+        text-transform: capitalize;
+        color: color(secondary-dark);
+        font-size: 1.3em;
+        line-height: .9;
+        margin-top: .2em;
+        margin-bottom: .1em;
+
+        @include desktop640 {
+            font-size: 2.1em;
+
+        }
+
+        @include desktop768 {
+            font-size: 2.5em;
+
+        }
+
+        @include desktop1024 {
+            font-size: 4em;
+
+        }
+
+    }
+}
+
+
+
+
+.main {
+
+    display: flex;
+    flex-direction: column;
+
+    @include desktop768 {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        background-color: color(secondary-dark);
+        padding: 1.2em;
+        order: 2;
+
+        @include desktop640 {}
+
+        @include desktop768 {}
+
+        @include desktop1024 {}
+
+        a {
+            color: color(white);
+            text-decoration: none;
+            font-family: $encode-sans;
+            display: block;
+            font-size: .7em;
+            letter-spacing: .1em;
+            margin: .6em .1em;
+            text-transform: uppercase;
+        }
+
+        a:hover {
+            color: color(green);
+        }
+
+        p {
+
+            color: color(white);
+
+            text-decoration: none;
+            font-family: $encode-sans;
+            display: block;
+            font-size: .6em;
+            letter-spacing: .1em;
+
+
+        }
+    }
+
+    .main-content {
+        margin-top: -3px;
+
+        padding: 1em;
+        flex: 70%;
+        column-gap: 2em;
+        column-count: 1;
+        column-rule: 1px solid color(secondary-dark);
+
+        @include desktop640 {
+            column-count: 2;
+
+        }
+
+        @include desktop768 {
+            column-count: 2;
+
+        }
+
+        @include desktop1024 {
+            column-count: 3;
+        }
+
+        .mainContent_text {
+            color: color(secondary-dark);
+            text-decoration: none;
+            font-family: $encode-sans;
+            display: block;
+            font-size: .65em;
+            letter-spacing: .1em;
+
+            @include desktop640 {
+                font-size: .7em;
+
+            }
+
+            @include desktop768 {
+                font-size: .8em;
+
+            }
+
+            @include desktop1024 {
+                font-size: .9em;
+                letter-spacing: -.02em;
+
+            }
+        }
+
+    }
+}
+
+
+
+.mainNewsFooter {
+    background: #eee;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+
+    p {
+        color: color(secondary-dark);
+        text-decoration: none;
+        font-family: $encode-sans;
+        font-size: .5em;
+    }
+
+}

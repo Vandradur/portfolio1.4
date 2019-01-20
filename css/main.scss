@@ -1,0 +1,22 @@
+@import "sectionStyles/variables";
+@import "sectionStyles/mixins";
+@import "sections/section-03";
+@import "sections/section-04";
+@import "sections/section-05";
+@import "sections/section-06";
+@import "sections/section-07";
+@import "sections/section-08";
+
+@import "layout/split";
+@import "layout/sidenav";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
+@import "layout/boldNewsHeadline";
+@import "layout/postcardsWrapper";
+@import "layout/heroImage";
+
+@import "base/base";
+@import "base/reset";
+@import "scss/fontawesome.scss";
+@import "scss/solid.scss"
